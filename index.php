@@ -36,7 +36,7 @@ session_start();
 
     <!-- Relembrar a senha -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Esqueceu sua senha?</a>
+      <a class="underlineHover" href="#">Cadastrar usuário</a>
     </div>
 
   </div>
