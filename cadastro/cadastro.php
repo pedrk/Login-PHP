@@ -15,30 +15,33 @@ session_start();
     <div class="fadeIn first">
         <a href="#"></a><img src="Imagens/Icone.png" alt="Icone"></a>
     </div>
-
-    
-    <?php
-    // Se a sessao não estiver autenticada, retorna um alerta 
-    if(isset($_SESSION['nao_autenticado'])):
-    ?>
+      <?php
+        if(isset($_SESSION['status_cadastro'])):
+      ?>
         <div class="bg-danger">
-          <p>Erro ao autenticar usuario</p>
+          <p>Usuario já cadastrado!</p>
         </div>
-    <?php
-    endif;
-    // Encera a sessao
-    unset($_SESSION['nao_autenticado']);
-    ?>
-    <form action="login\login.php" method="POST">
+      <?php
+      endif;
+      unset($_SESSION['status_cadastro'])
+      ?>
+
+      <?php
+        if(isset($_SESSION['usuario_existe'])):
+      ?>
+        <div class="bg-success">
+          <p>Cadastro efetuado!</p>
+        </div>
+      <?php
+        endif;
+        unset($_SESSION['usuario_existe']);
+      ?>
+    <form action="cadastrar.php" method="POST">
+      <input type="text" id="login" class="fadeIn second" name="nome" placeholder="Nome">
       <input type="text" id="login" class="fadeIn second" name="usuario" placeholder="Login">
       <input type="text" id="password" class="fadeIn third" name="senha" placeholder="Password">
-      <input type="submit" class="fadeIn fourth" value="Entrar">
+      <input type="submit" class="fadeIn fourth" value="Cadastrar">
     </form>
-
-    <!-- Relembrar a senha -->
-    <div id="formFooter">
-      <a class="underlineHover" href="cadastro.php">Cadastrar usuário</a>
-    </div>
 
   </div>
 </div>
