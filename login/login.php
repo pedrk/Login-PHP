@@ -16,10 +16,10 @@ $usuario = mysqli_real_escape_string($conexao,$_POST['usuario']);
 $senha = mysqli_real_escape_string($conexao ,$_POST['senha']);
 
 // Criando a query de validação
-$query="select nome from usuario where login_usuario = '{$usuario}' and senha = md5('{$senha}');";
+$sql="select nome from usuario where login_usuario = '{$usuario}' and senha = md5('{$senha}');";
 
 // Desenvolve a query no banco, com a conexão e a query desejada
-$result = mysqli_query($conexao, $query);
+$result = mysqli_query($conexao, $sql);
 
 // Checa o número de linhas que retornam da query
 // echo $row; exit();
@@ -29,7 +29,7 @@ $row = mysqli_num_rows($result);
 // Teste se retornar dados, envia o usuario a uma página
 if($row == 1) {
     $usuario_bd = mysqli_fetch_assoc($result);
-    $_SESSION['nome'] = $nome;
+    $_SESSION['nome'] = $usuario_bd['nome'];
     header('Location: painel.php');
     exit();
 }

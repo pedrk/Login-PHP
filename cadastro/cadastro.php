@@ -16,25 +16,25 @@ session_start();
         <a href="#"></a><img src="../Imagens/Icone.png" alt="Icone"></a>
     </div>
       <?php
-        if(isset($_SESSION['status_cadastro'])):
+        if(isset($_SESSION['usuario_existe'])):
       ?>
         <div class="bg-danger">
           <p>Usuario já cadastrado!</p>
         </div>
       <?php
       endif;
-      unset($_SESSION['status_cadastro'])
+      unset($_SESSION['usuario_existe'])
       ?>
 
       <?php
-        if(isset($_SESSION['usuario_existe'])):
+        if(isset($_SESSION['status_cadastro'])):
       ?>
         <div class="bg-success">
           <p>Cadastro efetuado!</p>
         </div>
       <?php
         endif;
-        unset($_SESSION['usuario_existe']);
+        unset($_SESSION['status_cadastro']);
       ?>
     <form action="cadastrar.php" method="POST">
       <input type="text" id="login" class="fadeIn second" name="nome" placeholder="Nome">
