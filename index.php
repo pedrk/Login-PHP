@@ -37,7 +37,7 @@ session_start();
 
     <!-- Relembrar a senha -->
     <div id="formFooter">
-      <a class="underlineHover" href="cadastro.php">Cadastrar usuário</a>
+      <a class="underlineHover" href="cadastro/cadastro.php">Cadastrar usuário</a>
     </div>
 
   </div>

@@ -28,7 +28,7 @@ $row = mysqli_num_rows($result);
 
 // Teste se retornar dados, envia o usuario a uma página
 if($row == 1) {
-    $usuario_bd = mysqli_fetch_assoc($result)
+    $usuario_bd = mysqli_fetch_assoc($result);
     $_SESSION['nome'] = $nome;
     header('Location: painel.php');
     exit();
