@@ -1,6 +1,6 @@
 <?php
 // Informações sobre a conexão
-$HOST =  '127.0.0.1:3030';
+$HOST =  '127.0.0.1';
 $USUARIO = 'admin';
 $SENHA = 'admin';
 $DB = 'Login';
