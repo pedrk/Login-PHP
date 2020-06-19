@@ -32,6 +32,9 @@ session_start();
     <form action="login\login.php" method="POST">
       <input type="text" id="login" class="fadeIn second" name="usuario" placeholder="Login">
       <input type="text" id="password" class="fadeIn third" name="senha" placeholder="Password">
+      <div>
+        <a class="underlineHover" href="esqueciSenha.php">Esqueceu sua senha?</a>
+      </div>
       <input type="submit" class="fadeIn fourth" value="Entrar">
     </form>
 

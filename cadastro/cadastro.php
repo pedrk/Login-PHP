@@ -31,6 +31,7 @@ session_start();
       ?>
         <div class="bg-success">
           <p>Cadastro efetuado!</p>
+          <p><a href="../index.php">Clique aqui para voltar ao inicio!</a></p>
         </div>
       <?php
         endif;
